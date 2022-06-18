@@ -104,11 +104,13 @@ app.get("/getQuickSightDashboardEmbedURL", function (req, res) {
                   console.log("3");
                   console.log(err, err.stack); // an error occurred
                   if (err.code && err.code === "ResourceExistsException") {
+                    console.log("Inside err.code", mobileDash);
+
                     var getDashboardParams = {
                       // required
                       AwsAccountId: "663850774840",
                       // required
-                      DashboardId: mobileDash,
+                      DashboardId: "c739ad1e-6e52-4f43-a500-8bb26b92812c",
                       // required
                       IdentityType: "IAM",
                       ResetDisabled: false, // can be passed in from api-gateway call
@@ -144,7 +146,7 @@ app.get("/getQuickSightDashboardEmbedURL", function (req, res) {
                       // required
                       AwsAccountId: "663850774840",
                       // required
-                      DashboardId: mobileDash,
+                      DashboardId: "c739ad1e-6e52-4f43-a500-8bb26b92812c",
                       // required
                       IdentityType: "IAM",
                       ResetDisabled: false, // can be passed in from api-gateway call
