@@ -6,6 +6,8 @@ var AWS = require("aws-sdk");
 var AmazonCognitoIdentity = require("amazon-cognito-identity-js");
 const https = require("https");
 
+const mobileDash = "c739ad1e-6e52-4f43-a500-8bb26b92812c";
+
 // declare a new express app
 var app = express();
 app.use(bodyParser.json());
@@ -106,7 +108,7 @@ app.get("/getQuickSightDashboardEmbedURL", function (req, res) {
                       // required
                       AwsAccountId: "663850774840",
                       // required
-                      DashboardId: "bdd15b1a-c670-4ce7-9ca1-e0cfb1860cd3",
+                      DashboardId: mobileDash,
                       // required
                       IdentityType: "IAM",
                       ResetDisabled: false, // can be passed in from api-gateway call
@@ -142,7 +144,7 @@ app.get("/getQuickSightDashboardEmbedURL", function (req, res) {
                       // required
                       AwsAccountId: "663850774840",
                       // required
-                      DashboardId: "bdd15b1a-c670-4ce7-9ca1-e0cfb1860cd3",
+                      DashboardId: mobileDash,
                       // required
                       IdentityType: "IAM",
                       ResetDisabled: false, // can be passed in from api-gateway call
