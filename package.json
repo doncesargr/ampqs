@@ -4,6 +4,7 @@
   "private": true,
   "homepage": ".",
   "dependencies": {
+    "@aws-amplify/core": "^4.5.8",
     "@aws-amplify/ui-react": "^3.0.0",
     "@emotion/react": "^11.9.3",
     "@emotion/styled": "^11.9.3",
